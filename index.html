@@ -12,7 +12,7 @@
     @import 'tailwindcss/utilities';
 
     .dropdown-menu {
-      transform: translate(-10px);
+      transform: translateY(-10px);
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease-in-out;
@@ -50,35 +50,45 @@
               bg-gradient-to-r from-blue-600
               to-purple-600 bg-clip-text 
               text-transparent
-              
               hover:from-purple-600 hover:to-blue-600
               transition-all duration-300 cursor-pointer">
-                Meu site
+            Meu site
           </h1>
         </div>
         <nav class="flex space-x-8">
-           <a href="#" class="menu-link text-gray-700 
+          <a href="#" class="menu-link text-gray-700 
            hover:text-blue-600 px-4 py-2 rounded-md 
            text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
-             Home
-           </a>
-          
-           <div class="dropdown relative">
-             <button class=""menu-link text-gray-700 
+            Home
+          </a>
+
+          <!-- Dropdown Serviços -->
+          <div class="dropdown relative">
+            <button class="menu-link flex items-center gap-1 text-gray-700 
              hover:text-blue-600 px-4 py-2 rounded-md 
              text-sm font-medium hover:bg-blue-50
              transition-colors duration-200">
-             
-             
-             <svg class="arrow ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
 
-              --COLOCAR UMA SETA--
-              --FAZER SUBMENU APARECER--
+              Serviços
+
+              <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
-                Serviços
+            </button>
 
-             </button>
-           </div>
+            <!-- Submenu -->
+            <ul class="dropdown-menu absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg">
+              <li>
+                <a href="#serv1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Serviço 1</a>
+              </li>
+              <li>
+                <a href="#serv2" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Serviço 2</a>
+              </li>
+              <li>
+                <a href="#serv3" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Serviço 3</a>
+              </li>
+            </ul>
+          </div>
 
         </nav>
       </div>
